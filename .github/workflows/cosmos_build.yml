@@ -1,0 +1,31 @@
+name: Website Builder
+
+on: 
+  repository_dispatch:
+  workflow_dispatch:
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  buildsite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build website
+        run: |
+          # Clone main cosmos-tour repo, install packages and build site
+          git clone https://.:$GITHUB_TOKEN@github.com/zkotti/cosmos-tour
+          cd cosmos-tour/mkdocs
+          pip3 install -r requirements.txt
+          mkdocs build
+          cd ../../
+          # clone this repo and copy build to cosmos-tour directory
+          git clone "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/e-panourgia/e-panourgia.github.io"
+          cp -r cosmos-tour/mkdocs/site/* e-panourgia.github.io/cosmos-tour
+          cd e-panourgia.github.io
+          # setup github actions bot as git user, commit and push to master
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add .
+          git commit -m "Update site build"
+          git push
