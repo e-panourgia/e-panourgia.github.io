@@ -81,6 +81,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#getting-up-to-date" class="nav-link">Getting up-to-date</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#making-changes" class="nav-link">Making Changes</a>
               <ul class="nav flex-column">
               </ul>
@@ -90,6 +94,10 @@
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#contribution-tips" class="nav-link">Contribution Tips</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#style-pattern" class="nav-link">Style pattern</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -114,6 +122,30 @@
 <li>Make sure you fill in the earliest version that you know has the issue, using commit hashes if possible.</li>
 <li>Fork the repository on GitHub.</li>
 </ul>
+<h2 id="getting-up-to-date">Getting up-to-date</h2>
+<p>It is always a good practice to <em>update frequently</em> your local records based on the changes that 
+have been made on the codebase recently.</p>
+<h3 id="how-to-achieve-that">How to achieve that?</h3>
+<ul>
+<li>If you are on the <strong>main branch</strong>, you could use <code>git pull</code>.</li>
+<li>If you are <strong>not on main branch</strong>, you could use:
+  ####<em>Rebase</em></li>
+</ul>
+<p>You could use the git command: <code>git rebase main</code>&lt;\n&gt;</p>
+<p>######<em>Note:</em>
+<br />
+<p>If there are conflicts, needs to be resolved.
+  This is the only issue that could arise using rebase.</p>
+</p>
+<p>####<em>Merge</em>
+   You could use the git command: <code>git merge main</code></p>
+<blockquote>
+<blockquote>
+<p><em><em>Tip:</em></em><br>Despite the fact that both commands are very useful, it is preferable in projects with many contributors like ours, to use the <em>rebase</em> command.
+  <br>Why?<br>
+     <em>Merge</em> command creates a new commit each time being used, making <em><em>commit history</em></em> less readable and manageable for maintainability and readability purposes.</p>
+</blockquote>
+</blockquote>
 <h2 id="making-changes">Making Changes</h2>
 <ul>
 <li>Create a topic branch from where you want to base your work (this is usually the master branch.)</li>
@@ -137,11 +169,33 @@
 <li>If contributing content to the guide, please make sure that your contribution conforms with <a href="https://developers.google.com/style/accessibility">Google's guidelines on writing accessible documentation</a> where relevant.</li>
 <li>If adding a new Markdown file, it may be worth checking out whether it should also appear on the <a href="https://e-panourgia.github.io/cosmos-tour/">website version of the guide</a>. If so, it should be included in the <code>nav</code> section of <a href="https://github.com/zkotti/cosmos-tour/blob/main/mkdocs/mkdocs.yml">mkdocs.yml</a>.</li>
 </ul>
+<h2 id="style-pattern">Style pattern</h2>
+<p>Every coding warehouse nowadays follows a specific pattern of code styling,
+so as to make life of developpers easier and their code prettier. <em>And so are we.</em></p>
+<h4 id="please-take-the-following-advices-as-kindly-suggested">Please take the following advices as kindly suggested:</h4>
+<h5 id="conventions">Conventions</h5>
+<ul>
+<li>Shall use <strong>snake case</strong> formatting for naming <strong>modules</strong> and <strong>files</strong></li>
+<li>Shall use <strong>title case</strong> formatting for naming <strong>Classes</strong></li>
+<li>Shall use <strong>snake case</strong> formatting for <strong>variables</strong></li>
+<li>Shall use <strong>upper case</strong> formatting for <strong>constants</strong></li>
+<li><strong>Code lines</strong> should <strong>not</strong> exceed the length of <strong>100 characters</strong></li>
+</ul>
+<h6 id="note">Note</h6>
+<p>While style pattern has not been extracted from a specific resource,
+  it could be said that is inspired from PEP8 coding style. </p>
+<h5 id="additional-suggestions">Additional Suggestions</h5>
+<p>Classes should be saparated by two new lines of codes
+Classes should be saparated by one new lines of codes
+Every block of code should not be separated by new line in its core part.
+Comments should exist on separate line from code lines.
+Comments should not be separated with new lines from code lines.</p>
 <h2 id="additional-resources">Additional Resources</h2>
 <ul>
 <li>General GitHub documentation for help <a href="https://docs.github.com/en/" target="_blank">Help</a></li>
 <li>GitHub pull request
    documentation <a href="https://help.github.com/articles/about-pull-requests/" target="_blank">Pull Request</a></li>
+<li>PEP8 official style guide </li>
 </ul></div>
             </div>
         </div>
