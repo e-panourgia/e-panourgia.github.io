@@ -89,6 +89,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#testing-changes" class="nav-link">Testing Changes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#submitting-changes" class="nav-link">Submitting Changes</a>
               <ul class="nav flex-column">
               </ul>
@@ -159,6 +163,18 @@ have been made on the codebase recently.</p>
 <li>Follow our <code>coding style</code>.</li>
 <li>Check again your code to assure nothing else was accidentally broken.</li>
 </ul>
+<h2 id="testing-changes">Testing Changes</h2>
+<p>We have created some tests in python. 
+Currently, we do not require to install pytest.</p>
+<h3 id="install-pytest">Install Pytest</h3>
+<p>Installing pytest by typing this command in command line: 
+  <code>pip install -U pytest</code></p>
+<h3 id="run-tests">Run Tests</h3>
+<p>You could run the tests that exist inside of file, by typing the following command:
+   <code>pytest -q -name_of_file</code>                                </p>
+<h5 id="note">Note</h5>
+<p>Given that your python points to the same place where you PIP manager points, this command lets you 
+  use the pytest framework to run the tests.</p>
 <h2 id="submitting-changes">Submitting Changes</h2>
 <ul>
 <li>Push your changes to a topic branch in your fork of the repository.</li>
@@ -189,7 +205,7 @@ so as to make life of developpers easier and their code prettier. <em>And so are
 <li>Comments should exist on separate line from code lines.</li>
 <li>Comments should not be separated with new lines from code lines.</li>
 </ul>
-<h6 id="note">Note</h6>
+<h6 id="note_1">Note</h6>
 <p>While style pattern has not been extracted from a specific resource,
   it could be said that is inspired from PEP8 coding style. </p>
 <h2 id="additional-resources">Additional Resources</h2>
