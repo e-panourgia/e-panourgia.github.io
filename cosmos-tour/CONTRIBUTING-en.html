@@ -127,54 +127,53 @@
 <li>Fork the repository on GitHub.</li>
 </ul>
 <h2 id="getting-up-to-date">Getting up-to-date</h2>
-<p>It is always a good practice to <em>update frequently</em> your local records based on the changes that 
+<p>It is always a good practice to <em>update frequently</em> your local records based on the changes that
 have been made on the codebase recently.</p>
 <h3 id="how-to-achieve-that">How to achieve that?</h3>
 <ul>
 <li>If you are on the <strong>main branch</strong>, you could use <code>git pull</code>.</li>
-<li>If you are <strong>not on main branch</strong>, you could use:
-  #### <em>Rebase</em></li>
+<li>If you are <strong>not on main branch</strong>, you could use:</li>
 </ul>
+<p>#### <em>Rebase</em></p>
 <p>You could use the git command: <code>git rebase main</code></p>
-<p>###### <em>Note:</em>
-<br />
+<p>###### <em>Note:</em></p>
 <p>If there are conflicts, needs to be resolved.
   This is the only issue that could arise using rebase.</p>
-</p>
-<p>#### <em>Merge</em>
-   You could use the git command: <code>git merge main</code></p>
+
+<p>#### <em>Merge</em></p>
+<p>You could use the git command: <code>git merge main</code></p>
 <blockquote>
 <blockquote>
 <p><em><em>Tip:</em></em><br>Despite the fact that both commands are very useful, it is preferable in projects with many contributors like ours, to use the <em>rebase</em> command.
-  <br>Why?<br>
-     <em>Merge</em> command creates a new commit each time being used, making <em><em>commit history</em></em> less readable and manageable for maintainability and readability purposes.</p>
+<br>Why?<br>
+<em>Merge</em> command creates a new commit each time being used, making <em><em>commit history</em></em> less readable and manageable for maintainability and readability purposes.</p>
 </blockquote>
 </blockquote>
 <h2 id="making-changes">Making Changes</h2>
 <ul>
 <li>Create a topic branch from where you want to base your work (this is usually the master branch.)</li>
 <li>Only target release branches if you are certain your fix must be on
-   that branch.</li>
+  that branch.</li>
 <li>To quickly create a topic branch based on master;
-   <code>git branch fix/master/my_contribution master</code> then checkout
-   the new branch with <code>git checkout fix/master/my_contribution</code>.
-   Please avoid working directly on the <code>master</code> branch.</li>
+  <code>git branch fix/master/my_contribution master</code> then checkout
+  the new branch with <code>git checkout fix/master/my_contribution</code>.
+  Please avoid working directly on the <code>master</code> branch.</li>
 <li>Make commits of logical units.</li>
 <li>Follow our <code>coding style</code>.</li>
 <li>Check again your code to assure nothing else was accidentally broken.</li>
 </ul>
 <h2 id="testing">Testing</h2>
-<p>We have created some tests in python. 
+<p>We have created some tests in python.
 Currently, we do not require to install pytest.</p>
 <h4 id="install-pytest">Install Pytest</h4>
-<p>Installing pytest by typing this command in command line: 
-  <code>pip install -U pytest</code></p>
+<p>Installing pytest by typing this command in command line:
+<code>pip install -U pytest</code></p>
 <h4 id="run-tests">Run Tests</h4>
 <p>You could run the tests that exist inside of file, by typing the following command:
-   <code>pytest -q -name_of_file</code>                                </p>
+<code>pytest -q -name_of_file</code></p>
 <h6 id="note">Note</h6>
-<p>Given that your python points to the same place where you PIP manager points, this command lets you 
-  use the pytest framework to run the tests.</p>
+<p>Given that your python points to the same place where you PIP manager points, this command lets you
+use the pytest framework to run the tests.</p>
 <h2 id="submitting-changes">Submitting Changes</h2>
 <ul>
 <li>Push your changes to a topic branch in your fork of the repository.</li>
@@ -207,14 +206,14 @@ so as to make life of developpers easier and their code prettier. <em>And so are
 </ul>
 <h6 id="note_1">Note</h6>
 <p>While style pattern has not been extracted from a specific resource,
-  it could be said that is inspired from PEP8 coding style. </p>
+it could be said that is inspired from PEP8 coding style.</p>
 <h2 id="additional-resources">Additional Resources</h2>
 <ul>
 <li>General GitHub documentation for help <a href="https://docs.github.com/en/" target="_blank">Help</a></li>
 <li>GitHub pull request
-   documentation <a href="https://help.github.com/articles/about-pull-requests/" target="_blank">Pull Request</a></li>
-<li>PEP8 official style guide  <a href="https://peps.python.org/pep-0008/" target="_blank">PEP8 guide</a></li>
-<li>Pytest tool <a href="https://docs.pytest.org/en/7.1.x/" target="_blank">Pytest </a> </li>
+  documentation <a href="https://help.github.com/articles/about-pull-requests/" target="_blank">Pull Request</a></li>
+<li>PEP8 official style guide <a href="https://peps.python.org/pep-0008/" target="_blank">PEP8 guide</a></li>
+<li>Pytest tool <a href="https://docs.pytest.org/en/7.1.x/" target="_blank">Pytest </a></li>
 </ul></div>
             </div>
         </div>
