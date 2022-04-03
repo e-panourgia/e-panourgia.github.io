@@ -163,17 +163,18 @@ have been made on the codebase recently.</p>
 <li>Check again your code to assure nothing else was accidentally broken.</li>
 </ul>
 <h2 id="testing">Testing</h2>
-<p>We have created some tests in python.
-Currently, we do not require to install pytest.</p>
+<p>We have created some tests in python. Currently, we do not require to install pytest.</p>
 <h4 id="install-pytest">Install Pytest</h4>
-<p>Installing pytest by typing this command in command line:
-<code>pip install -U pytest</code></p>
+<p>Installing pytest by typing this command in command line: 
+  <code>pip install -U pytest</code></p>
 <h4 id="run-tests">Run Tests</h4>
 <p>You could run the tests that exist inside of file, by typing the following command:
-<code>pytest -q -name_of_file</code></p>
-<h6 id="note">Note</h6>
-<p>Given that your python points to the same place where you PIP manager points, this command lets you
-use the pytest framework to run the tests.</p>
+   <code>pytest -q -name_of_file</code>                                </p>
+<h6 id="notes">Notes</h6>
+<ul>
+<li>Given that you use pip manager, you could use those installation commands. Similar commands used for other package managers. </li>
+<li>You install packages on the same place with your python package. Make sure that you use the same pip manager which is part of your python package to install the package correctly.</li>
+</ul>
 <h2 id="submitting-changes">Submitting Changes</h2>
 <ul>
 <li>Push your changes to a topic branch in your fork of the repository.</li>
@@ -204,7 +205,7 @@ so as to make life of developpers easier and their code prettier. <em>And so are
 <li>Comments should exist on separate line from code lines.</li>
 <li>Comments should not be separated with new lines from code lines.</li>
 </ul>
-<h6 id="note_1">Note</h6>
+<h6 id="note">Note</h6>
 <p>While style pattern has not been extracted from a specific resource,
 it could be said that is inspired from PEP8 coding style.</p>
 <h2 id="additional-resources">Additional Resources</h2>
